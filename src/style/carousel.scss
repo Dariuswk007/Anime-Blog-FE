@@ -1,0 +1,11 @@
+.carousel .slide img {
+    width: auto;
+    height: 80vh;
+}
+
+.carousel-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

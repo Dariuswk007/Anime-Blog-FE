@@ -17,9 +17,9 @@ export default function Home() {
   const renderAllAnime = () => {
     return allAnime.map((anime) =>{
       return (
-        <div>
-          {anime.title}
-          {anime.description}
+        <div className= "carousel-item-container">
+          <div className="title">{anime.title}</div>
+          <div className= 'description'>{anime.description}</div>
           <img src={anime.image} alt="anime" />
         </div>
       )
