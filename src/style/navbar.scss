@@ -1,0 +1,18 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    background-color: #598BDD;
+    margin-bottom: 50px;
+}
+
+.navbar-item {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navbar-item:hover {
+   color: grey;
+   transition: 0.5s ease-in-out;
+   text-decoration: underline;
+}
