@@ -1,27 +1,36 @@
 import React, {useState, useEffect} from 'react'
+import Axios from 'axios';
 
 export default function Blog() {
-
-    const [allUsers, setAllUsers] = useState([]);
+    
+    const url = ""
+    const [blogs, setBlogs] = useState([])
+    const [allBlogs, setAllBlogs] = useState([]);
 
     useEffect(() => {
-        fetch("https://hidden-mountain-30566.herokuapp.com/user/get")
+        fetch("https://hidden-mountain-30566.herokuapp.com/blog/get")
         .then((res) => res.json())
-        .then((res) => setAllUsers(res))
+        .then((res) => setAllBlogs(res))
         .catch((error) => console.log("there was an error retrieving your data.", error));
       }, []);
 
-    const renderAllUsers = () => {
-        return allUsers.map((user) => {
+    const renderAllBlogs = () => {
+        return allBlogs.map((blog) => {
             return (
-                {user,username, password}
+                <div>
+                {blog.characters}
+                </div>
             )
         })
     }
 
   return (
     <div>
-        BLOGS
+        <form>
+            <input placeholder="add blog" type="text"></input>
+            <button>Submit</button>
+        </form>
+        {renderAllBlogs()}
     </div>
   )
 }
