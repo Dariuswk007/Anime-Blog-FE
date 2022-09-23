@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-ro
 import Home from './Home';
 import Blog from './Blog';
 import Navbar from './Navbar';
-// import login from './Login';
+// import Login from './Login';
 
 export default function App() {
 
@@ -14,7 +14,7 @@ export default function App() {
         <Switch>
           <Route exact path = '/' component = {Home}/>
           <Route path = '/Blog' component = {Blog} />
-          {/* <Route path = '/Login' component = {login}/> : to be added later */}
+          {/* <Route path = '/Login' component = {Login}/> */}
           <Redirect to ='/' />
         </Switch>
       </Router>

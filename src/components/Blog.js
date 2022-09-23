@@ -3,8 +3,7 @@ import Axios from 'axios';
 
 export default function Blog() {
     
-    const url = ""
-    const [blogs, setBlogs] = useState([])
+    const [characters, setCharacters] =useState("")
     const [allBlogs, setAllBlogs] = useState([]);
 
     useEffect(() => {
@@ -12,7 +11,7 @@ export default function Blog() {
         .then((res) => res.json())
         .then((res) => setAllBlogs(res))
         .catch((error) => console.log("there was an error retrieving your data.", error));
-      }, []);
+      }, [allBlogs]);
 
     const renderAllBlogs = () => {
         return allBlogs.map((blog) => {
@@ -24,10 +23,27 @@ export default function Blog() {
         })
     }
 
+const createBlog = (e) => {
+    e.preventDefault();
+    fetch("https://hidden-mountain-30566.herokuapp.com/blog/add", {
+        method: 'POST',
+        body: JSON.stringify({
+            characters:characters,
+            user_fk: 1
+        }),
+        headers: {
+            "Content-type": "application/json; charset-UTF-8",
+        },
+    })
+        .then((res) => res.json())
+        .then((res) => console.log(res));
+        setCharacters("");
+}
+
   return (
     <div>
-        <form>
-            <input placeholder="add blog" type="text"></input>
+        <form onSubmit={createBlog}>
+            <input onChange={(e) => setCharacters(e.target.value)} placeholder="add blog" type="text" value={characters}></input>
             <button>Submit</button>
         </form>
         {renderAllBlogs()}
