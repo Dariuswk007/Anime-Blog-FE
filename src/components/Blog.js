@@ -1,5 +1,10 @@
 import React, {useState, useEffect} from 'react'
-import Axios from 'axios';
+import image1 from '../images/attack on titan.jpg'
+import image2 from '../images/demon-slayer.png'
+import image3 from '../images/FMA-Brotherhood.jpg'
+import image4 from '../images/summertime-rendering.jpg'
+import image5 from '../images/engage-kiss.jpg'
+import image6 from '../images/spyxfamily.jpg'
 
 export default function Blog() {
     
@@ -18,6 +23,7 @@ export default function Blog() {
             return (
                 <div>
                 {blog.characters}
+                <button onClick={() => deleteBlog(blog.id)}>Delete</button>
                 </div>
             )
         })
@@ -40,10 +46,25 @@ const createBlog = (e) => {
         setCharacters("");
 }
 
+const deleteBlog = (id) => {
+    fetch(`https://hidden-mountain-30566.herokuapp.com/blog/delete/${id}`, {
+        method: 'DELETE'})
+    .then((res) => res.json())
+    .then((res) => console.log(res))
+}
+
   return (
-    <div>
+    <div className="form-container">
+        <div className="image-container">
+        <img src={image1} alt='attack on titan'></img>
+        <img src={image2} alt='demon slayer'></img>
+        <img src={image3} alt='fullmetal alchemist brotherhood'></img>
+        <img src={image4} alt='summertime rendering'></img>
+        <img src={image5} alt='engage kiss'></img>
+        <img src={image6} alt='spy x family'></img>
+        </div>
         <form onSubmit={createBlog}>
-            <input onChange={(e) => setCharacters(e.target.value)} placeholder="add blog" type="text" value={characters}></input>
+            <input onChange={(e) => setCharacters(e.target.value)} placeholder="what are your thoughts?" type="text" value={characters}></input>
             <button>Submit</button>
         </form>
         {renderAllBlogs()}

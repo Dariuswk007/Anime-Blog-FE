@@ -1,8 +1,29 @@
 HTML, body {
     margin: 0px;
     padding: 0px;
-      border: 0px;
-    }
+    border: 0px;
+    background: rgb(0,56,111);
+    background: linear-gradient(107deg, rgba(0,56,111,1) 0%, rgba(0,192,219,1) 100%);
+  }
+
+@media (max-width: 500px) {
+  body {
+   .carousel .slide img {
+    width: auto;
+    height: 30vh;
+   }
+  }
+}
+@media (max-width: 1155px) {
+  body {
+   .carousel .slide img {
+    width: auto;
+    height: 30vh;
+   }
+  }
+}
 
 @import "./navbar.scss";
-@import "./carousel.scss"
+@import "./carousel.scss";
+@import "./header.scss";
+@import "./form-container.scss";

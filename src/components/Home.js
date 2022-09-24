@@ -28,6 +28,9 @@ export default function Home() {
 
   return (
     <div>
+      <div className="header">
+        Welcome to Silverhawk Blogs, a site where you can find anime everyone's talking about, and give your thoughts! Below are the currently trending Anime:
+        </div>
         <Carousel className="carousel"
         infiniteLoop
         useKeyboardArrows
