@@ -23,12 +23,42 @@
 
 @media (max-width: 600px) {
     .form-container input {
-        width: 275px;
+        width: 270px;
+    }
+}
+
+@media (max-width: 662px) {
+    .form-container input {
+        width: 250px;
+    }
+}
+
+@media (max-width: 720px) {
+    .form-container input {
+        width: 230px;
+    }
+}
+
+@media (max-width: 770px) {
+    .form-container input {
+        width: 210px;
     }
 }
 
 @media (max-width: 360px) {
     .form-container input {
-        width: 171px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .form-container input {
+        width: 150px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .form-container {
+       padding: 20px;
     }
 }
