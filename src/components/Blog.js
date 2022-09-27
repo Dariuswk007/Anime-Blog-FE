@@ -66,7 +66,9 @@ const deleteBlog = (id) => {
         </div>
 
         <div>
+            <div className="post-container">
             {renderAllBlogs()} 
+            </div>
             <form className="form-container" onSubmit={createBlog}>
                 <input onChange={(e) => setCharacters(e.target.value)} placeholder="what are your thoughts?" type="text" value={characters}></input>
                 <button>Submit</button>

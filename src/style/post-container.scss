@@ -1,0 +1,10 @@
+.post-container {
+    color: rgba(255, 255, 255, 0.785);
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.post-container button:hover {
+    background-color: red;
+    transition: 0.2s ease-in-out;
+}

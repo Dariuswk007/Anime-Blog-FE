@@ -1,3 +1,16 @@
 .form-container {
     padding-left: 360px;
+    width: 1px;
+}
+
+.form-container input {
+    border-radius: 6px;
+    border: 2px solid rgb(0, 191, 255);
+    width: 374px;
+}
+
+.form-container button:hover {
+    background-color: green;
+    color: greenyellow;
+    transition: 0.5s ease-in-out;
 }
