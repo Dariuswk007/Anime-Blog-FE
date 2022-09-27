@@ -3,7 +3,7 @@ HTML, body {
     padding: 0px;
     border: 0px;
     background: rgb(0,56,111);
-    background: linear-gradient(107deg, rgba(0,56,111,1) 0%, rgba(0,192,219,1) 100%);
+    background: skyblue;
   }
 
   body::-webkit-scrollbar {
@@ -32,43 +32,19 @@ HTML, body {
   body {
    .carousel .slide img {
     width: auto;
-    height: 30vh;
+    height: 35vh;
    }
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 360px) {
   body {
-    .image-container {
-      width: auto;
-      height: 30vh;
-    }
+   .carousel .slide img {
+    width: auto;
+    height: 20vh;
+   }
   }
 }
-
-@media (max-width: 1155px) {
-  body {
-    .image-container {
-      width: auto;
-      height: 30vh;
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  html, body {
-    background: black;
-  }
-}
-
-@media (max-width: 1157px) {
-  html, body {
-    background: black;
-  }
-}
-  
-
-
 
 @import "./navbar.scss";
 @import "./carousel.scss";

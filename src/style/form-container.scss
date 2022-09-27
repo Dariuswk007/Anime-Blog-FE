@@ -14,3 +14,21 @@
     color: greenyellow;
     transition: 0.5s ease-in-out;
 }
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-container input {
+        width: 275px;
+    }
+}
+
+@media (max-width: 360px) {
+    .form-container input {
+        width: 171px;
+    }
+}

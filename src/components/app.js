@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-ro
 import Home from './Home';
 import Blog from './Blog';
 import Navbar from './Navbar';
-// import Login from './Login';
 
 export default function App() {
 
