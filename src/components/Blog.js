@@ -54,20 +54,26 @@ const deleteBlog = (id) => {
 }
 
   return (
-    <div className="form-container">
+    <div className="form-image-wrapper">
+       
         <div className="image-container">
-        <img src={image1} alt='attack on titan'></img>
-        <img src={image2} alt='demon slayer'></img>
-        <img src={image3} alt='fullmetal alchemist brotherhood'></img>
-        <img src={image4} alt='summertime rendering'></img>
-        <img src={image5} alt='engage kiss'></img>
-        <img src={image6} alt='spy x family'></img>
+        <img className="attack-on-titan-img" src={image1} alt='attack on titan'></img>
+        <img classname="demon-slayer-img" src={image2} alt='demon slayer'></img>
+        <img classNme="fma-img" src={image3} alt='fullmetal alchemist brotherhood'></img>
+        <img className="summertime-rendering-img"src={image4} alt='summertime rendering'></img>
+        <img className="engage-kiss-img" src={image5} alt='engage kiss'></img>
+        <img className="spy-family-img"src={image6} alt='spy x family'></img>
         </div>
-        <form onSubmit={createBlog}>
-            <input onChange={(e) => setCharacters(e.target.value)} placeholder="what are your thoughts?" type="text" value={characters}></input>
-            <button>Submit</button>
-        </form>
-        {renderAllBlogs()}
+
+        <div>
+            {renderAllBlogs()} 
+            <form className="form-container" onSubmit={createBlog}>
+                <input onChange={(e) => setCharacters(e.target.value)} placeholder="what are your thoughts?" type="text" value={characters}></input>
+                <button>Submit</button>
+            </form>
+        </div>
+
+       
     </div>
   )
 }
