@@ -57,6 +57,12 @@
     }
 }
 
+@media (max-width: 426px) {
+    .form-container input {
+        width: 130px;
+    }
+}
+
 @media (max-width: 1380px) {
     .form-container {
        padding: 20px;
