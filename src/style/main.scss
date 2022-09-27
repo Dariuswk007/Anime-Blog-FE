@@ -6,6 +6,20 @@ HTML, body {
     background: linear-gradient(107deg, rgba(0,56,111,1) 0%, rgba(0,192,219,1) 100%);
   }
 
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(32, 82, 218);
+    outline: 2px solid slategray;
+    border-radius: 18px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.753);
+  }
+
 @media (max-width: 500px) {
   body {
    .carousel .slide img {
@@ -22,6 +36,39 @@ HTML, body {
    }
   }
 }
+
+@media (max-width: 500px) {
+  body {
+    .image-container {
+      width: auto;
+      height: 30vh;
+    }
+  }
+}
+
+@media (max-width: 1155px) {
+  body {
+    .image-container {
+      width: auto;
+      height: 30vh;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  html, body {
+    background: black;
+  }
+}
+
+@media (max-width: 1157px) {
+  html, body {
+    background: black;
+  }
+}
+  
+
+
 
 @import "./navbar.scss";
 @import "./carousel.scss";
